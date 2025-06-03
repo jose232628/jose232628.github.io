@@ -1,0 +1,7 @@
+{
+  "alumnos": [
+    { "nombre": "Juan", "apellidos": "Pérez López" },
+    { "nombre": "Ana", "apellidos": "Martínez Gómez" },
+    { "nombre": "Carlos", "apellidos": "Sánchez Ruiz" }
+  ]
+}

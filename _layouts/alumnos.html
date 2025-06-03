@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Alumnos</title>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Inicio</a> |
+    <a href="alumnos.html">Alumnos</a> |
+    <a href="notas.html">Notas</a>
+  </nav>
+
+  <h1>Lista de Alumnos</h1>
+  <ul id="lista-alumnos"></ul>
+
+  <script>
+    fetch('alumnos.json')
+      .then(response => response.json())
+      .then(data => {
+        const ul = document.getElementById('lista-alumnos');
+        data.alumnos.forEach(alumno => {
+          const li = document.createElement('li');
+          li.textContent = `${alumno.nombre} ${alumno.apellidos}`;
+          ul.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>
